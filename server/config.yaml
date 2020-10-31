@@ -1,0 +1,44 @@
+system:
+  port: 8010
+  mode: dev
+  name: 'TimeTableApi'
+
+baseApi:
+  loginApi: 'http://jwcxxcx.ccsu.cn/jwxt/Logon.do?method=logon'
+  timetableApi: 'http://jwcxxcx.ccsu.cn/jwxt/tkglAction.do?method=goListKbByXs&istsxx=no'
+
+mysql:
+  username: 'api_ygl_plus'
+  password: 'BbGnWbk7sGp4witE'
+  path: '47.106.188.222:3306'
+  dbName: 'api_ygl_plus'
+  config: 'charset=utf8&parseTime=True&loc=Local'
+  maxIdleConns: 10
+  maxOpenConns: 100
+  logMode: false
+
+redis:
+  addr: '47.106.188.222:6379'
+  password: ''
+  db: 0
+  enable: false
+
+log:
+  encoder: json
+  level: info
+  path: log
+  maxSize: 5
+  maxBackups: 5
+  maxAge: 30
+  compress: false
+
+jwt:
+  signingKey: CVzY4frTNrtD
+
+captcha:
+  width: 120
+  height: 40
+  length: 5
+
+remote:
+  timetableApi: 'http://ng.ygl.plus/timetable'
